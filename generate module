@@ -1,0 +1,69 @@
+ng g c home (ng generate component home)
+ng g c aboutus (ng generate component aboutus)
+
+----------------------------------------------
+ng g m home (ng generate module aboutus)
+ng g m aboutus (ng generate module aboutus)
+
+_________________________________________________________________
+aboutus.module.ts
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { AboutusComponent } from './aboutus.component';
+
+@NgModule({
+  imports: [
+    CommonModule
+  ],
+
+  exports: [
+    AboutusComponent
+  ],
+
+  declarations: [AboutusComponent]
+})
+export class AboutusModule { }
+
+_________________________________________________________________
+home.module.ts
+
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HomeComponent } from './home.component';
+
+@NgModule({
+  imports: [
+    CommonModule
+  ],
+
+  exports: [
+    HomeComponent
+  ],
+
+
+  declarations: [HomeComponent]
+})
+export class HomeModule { }
+
+
+_________________________________________________________________
+app.module.ts
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+ ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+
+
